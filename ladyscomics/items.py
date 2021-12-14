@@ -13,3 +13,4 @@ class LadyscomicsItem(scrapy.Item):
     date = scrapy.Field()
     body = scrapy.Field()
     hasImage = scrapy.Field()
+    comments =  scrapy.Field()

@@ -4,7 +4,8 @@ from ladyscomics.items import LadyscomicsItem
 class LadysComicsSpider(scrapy.Spider):
     name = "LadysComics"
     start_urls = [
-            'http://ladyscomics.com.br/category/especiais',    ]
+            'http://ladyscomics.com.br/',
+                ]
  
     def parse(self, response):
         print(response)
@@ -18,6 +19,7 @@ class LadysComicsSpider(scrapy.Spider):
             url = response.urljoin(href)
             yield scrapy.Request(url, callback=self.parse_dir_contents, dont_filter=True)
 
+   
     def parse_dir_contents(self, response):
         item = LadyscomicsItem()
         item['title'] = response.xpath('//h1[has-class("entry-title")]/text()').extract()
@@ -27,9 +29,16 @@ class LadysComicsSpider(scrapy.Spider):
             line.strip() 
             for line in p.xpath('.//text()').extract() 
             if line.strip())    
-            for p in response.xpath('//p')
+            for p in response.xpath('//div[has-class("entry-content")]//p')
             ]
-            
+        item['comments'] = [ ' '.join(
+            line.strip() 
+            for line in p.xpath('.//text()').extract() 
+            if line.strip())    
+            for p in response.xpath('//div[has-class("comments-area")]//ol//p')
+            ]
+        
+
         if(response.xpath('//img').getall() != ''):
             item['hasImage'] = True
         else:
