@@ -14,3 +14,11 @@ class LadyscomicsItem(scrapy.Item):
     body = scrapy.Field()
     hasImage = scrapy.Field()
     comments =  scrapy.Field()
+
+class BamqItem(scrapy.Item):
+    # define the fields for your item here like:
+    author = scrapy.Field()
+    signature = scrapy.Field()
+    city = scrapy.Field()
+    state = scrapy.Field()
+    role =  scrapy.Field()
