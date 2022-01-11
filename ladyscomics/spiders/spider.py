@@ -37,7 +37,6 @@ class LadysComicsSpider(scrapy.Spider):
             if line.strip())    
             for p in response.xpath('//div[has-class("comments-area")]//ol//p')
             ]
-        
 
         if(response.xpath('//img').getall() != ''):
             item['hasImage'] = True

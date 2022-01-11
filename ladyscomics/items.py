@@ -14,6 +14,7 @@ class LadyscomicsItem(scrapy.Item):
     body = scrapy.Field()
     hasImage = scrapy.Field()
     comments =  scrapy.Field()
+    category = scrapy.Field()
 
 class BamqItem(scrapy.Item):
     # define the fields for your item here like:
