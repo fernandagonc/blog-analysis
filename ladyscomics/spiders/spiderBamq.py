@@ -8,11 +8,11 @@ class LadysComicsSpider(scrapy.Spider):
                 ]
  
     def parse(self, response):  
-        for href in response.xpath('//div[has-class("pagination")]//a[has-class("nextpage")]/@href').getall():
+        for href in response.xpath('//div[has-class("pagination")]//a/@href').getall():
             print(href)
             url = response.urljoin(href)
             yield scrapy.Request(url, callback=self.parse_dir_contents, dont_filter=True)
-            
+
         yield scrapy.Request('http://ladyscomics.com.br/bamq', callback=self.parse_dir_contents, dont_filter=True)
       
             
