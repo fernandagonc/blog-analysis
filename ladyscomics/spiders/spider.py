@@ -42,4 +42,19 @@ class LadysComicsSpider(scrapy.Spider):
             item['hasImage'] = True
         else:
              item['hasImage'] = False
+
+
+        item['category'] = response.xpath('//a[@rel="category tag"]/text()').extract()
+
+        # if(response.xpath('//article[has-class("category-eventos")]').extract_first() != None):
+        #     item['category'] = 'Eventos'
+        # elif(response.xpath('//article[has-class("category-entrevistas")]').extract_first() != None):
+        #     item['category'] = 'Entrevistas'
+        # elif(response.xpath('//article[has-class("category-quadrinhos-(\d)")]').extract_first() != None):
+        #     item['category'] = 'Quadrinhos'
+        # elif(response.xpath('//article[has-class("category-especiais")]').extract_first() != None):
+        #     item['category'] = 'Especiais'
+        # else:
+        #     item['category'] = 'Outros'
+
         yield item
