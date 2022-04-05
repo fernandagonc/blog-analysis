@@ -1,5 +1,5 @@
 import scrapy
-from ladyscomics.items import LadyscomicsItem
+from crawlers.items import LadyscomicsItem
 
 class LadysComicsSpider(scrapy.Spider):
     name = "LadysComics"
