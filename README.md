@@ -27,4 +27,9 @@ Para rodar o spider que extrai os dados da página BAMQ!, que possui dados sobre
 
 Os resultados da consulta acima estão no csv *bamq.csv*
 
+<<<<<<< HEAD
 ## Mina de HQ
+=======
+## Visualizações
+Diversas visualizações dos dados estão disponíveis em: https://docs.google.com/presentation/d/1Mr7s5mNtKR5qNLcxDf8ctbIOEoI9tYEAC6SY6_Lwy9g/edit?usp=sharing
+>>>>>>> fbe5e6b8ec50177fc8318ff21ca820c8f6330457
