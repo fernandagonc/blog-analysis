@@ -23,3 +23,6 @@ class BamqItem(scrapy.Item):
     city = scrapy.Field()
     state = scrapy.Field()
     role =  scrapy.Field()
+
+class MinaHQItem(scrapy.Item):
+    test = scrapy.Field()

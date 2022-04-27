@@ -29,6 +29,6 @@ Os resultados da consulta acima estão no csv *bamq.csv*
 
 ## Mina de HQ
 
-## Visualizações
+## Visualizações dos dados
 Diversas visualizações dos dados estão disponíveis em: https://docs.google.com/presentation/d/1Mr7s5mNtKR5qNLcxDf8ctbIOEoI9tYEAC6SY6_Lwy9g/edit?usp=sharing
 

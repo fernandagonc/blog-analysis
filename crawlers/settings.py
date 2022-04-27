@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'ladyscomics'
+BOT_NAME = 'crawlers'
 
-SPIDER_MODULES = ['ladyscomics.spiders']
-NEWSPIDER_MODULE = 'ladyscomics.spiders'
+SPIDER_MODULES = ['crawlers.spiders']
+NEWSPIDER_MODULE = 'crawlers.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'ladyscomics (+http://www.yourdomain.com)'
+#USER_AGENT = 'crawlers (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
