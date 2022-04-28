@@ -6,7 +6,7 @@
 import scrapy
 
 
-class LadyscomicsItem(scrapy.Item):
+class TextItem(scrapy.Item):
     # define the fields for your item here like:
     title = scrapy.Field()
     author = scrapy.Field()

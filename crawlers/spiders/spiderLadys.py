@@ -1,5 +1,5 @@
 import scrapy
-from crawlers.items import LadyscomicsItem
+from crawlers.items import TextItem
 
 class LadysComicsSpider(scrapy.Spider):
     name = "LadysComics"
@@ -21,7 +21,7 @@ class LadysComicsSpider(scrapy.Spider):
 
    
     def parse_dir_contents(self, response):
-        item = LadyscomicsItem()
+        item = TextItem()
         item['title'] = response.xpath('//h1[has-class("entry-title")]/text()').extract()
         item['author'] = response.xpath('//a[has-class("author")]/text()').extract()
         item['date'] = response.xpath('//a[has-class("entry-date")]/text()').extract_first()
