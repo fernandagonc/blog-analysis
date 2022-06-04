@@ -27,8 +27,22 @@ Para rodar o spider que extrai os dados da página BAMQ!, que possui dados sobre
 
 Os resultados da consulta acima estão no csv *bamq.csv*
 
+### Visualizações dos dados
+Visualizações geradas dos dados estão disponíveis em: https://docs.google.com/presentation/d/1Mr7s5mNtKR5qNLcxDf8ctbIOEoI9tYEAC6SY6_Lwy9g/edit?usp=sharing
+
 ## Mina de HQ
 
-## Visualizações dos dados
-Diversas visualizações dos dados estão disponíveis em: https://docs.google.com/presentation/d/1Mr7s5mNtKR5qNLcxDf8ctbIOEoI9tYEAC6SY6_Lwy9g/edit?usp=sharing
 
+### Execução
+
+Para rodar o spider que extrai os dados da página principal, postagens em geral, salvando os dados em um CSV: 
+```
+    scrapy crawl MinaHQ -o file.csv -t csv 
+```
+
+Os resultados da consulta acima estão no csv *minahq.csv*
+
+
+
+### Visualizações dos dados
+Visualizações geradas dos dados estão disponíveis em: https://docs.google.com/presentation/d/1XDkljXboDk8_J_eZ3nIwC_xz7xpCQY0zHDpzAflngGA/edit?usp=sharing
